@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="landing-page.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+</head>
+<body>
+
+    <div class="nav" [ngClass]="{'scrolled' : isScrolled}">
+
+        <div>
+            <ul>
+                <img src="assets\netflixx.png" alt="Netflix logo" class="nav-logo">
+                <a routerLink="/all-movies" href="">Home</a>
+                <a  routerLink="/all-movies" href="">TV Shows</a>
+                <a  routerLink="/all-movies" href="">Movies</a>
+                <a  routerLink="/all-movies" href="">New & Popular</a>
+                <a  routerLink="/all-movies" href="">My List</a>
+                <a  routerLink="/all-movies" href="">Watch Again</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <div class="search-container">
+                    <input class ="search-box" type="search" placeholder="search"  *ngIf="isSearchClicked">
+                    <span class="fas fa-search search-img" [ngStyle]="{'color': isSearchIconWhite ? 'white' : ''}" (click)="toggleSearch()"></span>
+                </div>
+
+                <a href="">CHILDREN</a>
+                <a href="" class="fas fa-gift"></a>
+                <a href="" class="fas fa-bell"></a>
+                <img src="assets\avatar.png" alt="Netflix avatar" class="nav-avatar">
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="outer-banner">
+        <div class="banner">
+            <div class="fog-banner">
+            </div>
+        </div>
+        <div class="waste-banner">
+            <div class="banner-contents">
+                <h1 class="banner-title">TITLE</h1>
+                <div class="banner-buttons">
+                    <button class="banner-button">Play</button>
+                    <button class="banner-button">My List</button>
+                </div>
+                <div class="banner-description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem aliquam delectus hic vitae soluta consequatur dolorum, odio fugiat sunt tempore atque unde est, libero, vero sapiente enim necessitatibus quisquam doloribus? 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- NETFLIX ORIGINALS -->
+    <div class="row">
+        <h2>NETFLIX ORIGINALS</h2>
+        <app-images></app-images>
+            <!-- <div class="row_posters">
+              <img *ngFor="let poster of netflixOriginalsPosters" [src]="poster" alt="poster" class="row_poster row_posterLarge">
+            </div> -->
+    </div>
+
+
+    <!-- TRENDING NOW -->
+    <div class="row">
+        <h2>TRENDING NOW</h2>
+        <app-images></app-images>
+        <!-- <div class="row_posters">
+            <img *ngFor="let poster of netflixOriginalsPosters" [src]="poster" alt="poster" class="row_poster">
+          </div> -->
+    </div>
+
+
+    <!-- TOP RATED -->
+    <div class="row">
+        <h2>TOP RATED</h2>
+        <app-images></app-images>
+        <!-- <div class="row_posters">
+            <img *ngFor="let poster of netflixOriginalsPosters" [src]="poster" alt="poster" class="row_poster">
+          </div> -->
+    </div>
+
+
+    <!-- ACTION MOVIES -->
+    <div class="row">
+        <h2>ACTION MOVIES</h2>
+        <app-images></app-images>
+        <!-- <div class="row_posters">
+            <img *ngFor="let poster of netflixOriginalsPosters" [src]="poster" alt="poster" class="row_poster">
+          </div> -->
+    </div>
+
+
+    <!-- COMEDY MOVIES -->
+    <div class="row">
+        <h2>COMEDY MOVIES</h2>
+        <app-images></app-images>
+        <!-- <div class="row_posters">
+            <img *ngFor="let poster of netflixOriginalsPosters" [src]="poster" alt="poster" class="row_poster">
+          </div> -->
+    </div>
+
+    <!-- HORROR MOVIES -->
+    <div class="row">
+        <h2>HORROR MOVIES</h2>
+        <app-images></app-images>
+        <!-- <div class="row_posters">
+            <img *ngFor="let poster of netflixOriginalsPosters" [src]="poster" alt="poster" class="row_poster">
+          </div> -->
+    </div>
+
+
+    <!-- ROMANCE MOVIES -->
+    <div class="row">
+        <h2>ROMANCE MOVIES</h2>
+        <app-images></app-images>
+        <!-- <div class="row_posters">
+            <img *ngFor="let poster of netflixOriginalsPosters" [src]="poster" alt="poster" class="row_poster">
+          </div> -->
+    </div>
+
+
+    <!-- DOCUMENTARIES -->
+    <div class="row">
+        <h2>DOCUMENTARIES</h2>
+        <app-images></app-images>
+        <!-- <div class="row_posters">
+            <img *ngFor="let poster of netflixOriginalsPosters" [src]="poster" alt="poster" class="row_poster">
+          </div> -->
+    </div>
+</body>
+</html>

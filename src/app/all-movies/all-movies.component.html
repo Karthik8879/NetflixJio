@@ -1,0 +1,30 @@
+
+
+<!-- <div class="container">
+    <div *ngFor="let _ of imageArray">
+        <img src="{{goodimage}}" alt="">
+    </div>
+</div> -->
+
+<body class="container">
+    <h2>Movies</h2>
+    <div class="parent">
+        <cdk-virtual-scroll-viewport itemSize="10">
+            <div *cdkVirtualFor="let i of imageArray; let idx = index">
+                <p>{{idx+1}}</p>
+                <img src="{{i}}"  alt="">
+                <!-- <img [src]="i" alt=""> -->
+            </div>
+        </cdk-virtual-scroll-viewport>
+    </div>
+</body>
+
+<!-- <cdk-virtual-scroll-viewport itemSize="5" class="cdk-virtual-scrollable">     -->
+
+
+<!-- scrolledindexchange -->
+<!-- viewchild -> reference -->
+
+
+
+<!-- npm i faker --save -->

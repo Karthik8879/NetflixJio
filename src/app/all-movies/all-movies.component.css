@@ -1,0 +1,26 @@
+.container{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+}
+
+.parent{
+    height: 50vh;
+}
+
+img{
+    /* height: 200px; */
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+:host ::ng-deep .cdk-virtual-scrollable{
+    contain: none;
+}
+
+:host ::ng-deep .cdk-virtual-scroll-content-wrapper{
+    transform: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
